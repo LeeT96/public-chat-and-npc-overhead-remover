@@ -39,6 +39,9 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final String PICKAXE_SPECIAL_TEXT = "Smashing!";
 	private static final String HARPOON_SPECIAL_TEXT = "Here fishy fishies!";
 
+	// Other Messages
+	private static final String CUPPA_TEA_TEXT = "Aaah, nothing like a nice cuppa tea!";
+
 	// NPC IDs
 	private static final Set<Integer> CERBERUS = Set.of(5862, 5863, 5866);
 	private static final Set<Integer> SUMMONED_SOUL = Set.of(5867, 5868, 5869);
@@ -51,6 +54,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> DERANGEDARCH = Set.of(7806);
 	private static final Set<Integer> CRAZYARCH = Set.of(6618);
 	private static final Set<Integer> ROGUE = Set.of(6603);
+	private static final Set<Integer> TOWN_CRIER = Set.of(276, 277, 278, 279, 280, 6823, 10887);
 
 	// Special Attacks
 	private Set<String> activeMutesOH;
@@ -117,7 +121,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		{
 			mutedNPCsOH.addAll(CERBERUS);
 		}
-		if (config.muteCerberusOH())
+		if (config.muteSummonedSoulOH())
 		{
 			mutedNPCsOH.addAll(SUMMONED_SOUL);
 		}
@@ -156,6 +160,22 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteRoguesOH())
 		{
 			mutedNPCsOH.addAll(ROGUE);
+		}
+		if (config.muteTownCrierOH())
+		{
+			mutedNPCsOH.addAll(TOWN_CRIER);
+		}
+
+		// Other - Overheads
+		if (config.muteTeaOH())
+		{
+			activeMutesOH.add(CUPPA_TEA_TEXT);
+		}
+
+		// Other - Overheads
+		if (config.muteTeaPC())
+		{
+			activeMutesPC.add(CUPPA_TEA_TEXT);
 		}
 
 		// NPCs - Public Chat

@@ -26,9 +26,16 @@ Took some code from "**Chop Chop Stop**" after installing it and realising it no
 * Deranged Archaeologist
 * Crazy Archaeologist
 * Rogues (at the Rogue's Castle in the Wilderness)
-<br>
+* Town Crier
 
 **_There are plans to include NPC public chat messages in the future_**
+
+# Current Other Overhead Messages
+* Cuppa Tea
+
+# Current Other Public Chat Messages
+* Cuppa Tea
+<br>
 <br>
 
 _Credits to "Chop Chop Stop" for the inspiration_

@@ -222,6 +222,55 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "muteTownCrierOH",
+			name = "Town Crier",
+			description = "Hides all overhead messages from the Town Criers around the world",
+			section = npcOHSection
+	)
+	default boolean muteTownCrierOH()
+	{
+		return true;
+	}
+
+	// Other - Overheads
+	@ConfigSection(
+			name = "Other - Overhead",
+			description = "Other overhead messages",
+			position = 3
+	)
+	String otherSectionOH = "otherSectionOH";
+
+	@ConfigItem(
+			keyName = "muteTeaOH",
+			name = "Hide Cuppa Tea",
+			description = "Hides the 'Aaah, nothing like a nice cuppa tea!' overhead message",
+			section = otherSectionOH
+	)
+	default boolean muteTeaOH()
+	{
+		return true;
+	}
+
+	// Other - Public Chat
+	@ConfigSection(
+			name = "Other - Public Chat",
+			description = "Other public chat messages",
+			position = 3
+	)
+	String otherSectionPC = "otherSectionPC";
+
+	@ConfigItem(
+			keyName = "muteTeaPC",
+			name = "Hide Cuppa Tea",
+			description = "Hides the 'Aaah, nothing like a nice cuppa tea!' public chat message",
+			section = otherSectionPC
+	)
+	default boolean muteTeaPC()
+	{
+		return true;
+	}
+
 	// NPCs - Public Chat
 //	@ConfigSection(
 //			name = "NPC - Public Chat",
