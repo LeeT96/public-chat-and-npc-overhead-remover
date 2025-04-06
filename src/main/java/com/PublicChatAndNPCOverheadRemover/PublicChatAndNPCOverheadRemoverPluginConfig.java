@@ -135,6 +135,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "muteChaosFanaticOH",
+			name = "Chaos Fanatic",
+			description = "Hides all overhead messages during the Chaos Fanatic fight",
+			section = npcOHSection
+	)
+	default boolean muteChaosFanaticOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 			keyName = "muteCerberusOH",
 			name = "Cerberus",
 			description = "Hides all overhead messages during the Cerberus fight",
