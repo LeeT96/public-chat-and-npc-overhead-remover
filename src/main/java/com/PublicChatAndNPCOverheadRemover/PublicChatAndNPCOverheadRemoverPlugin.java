@@ -53,6 +53,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> KREE = Set.of(3162, 6492, 12443);
 	private static final Set<Integer> DERANGEDARCH = Set.of(7806);
 	private static final Set<Integer> CRAZYARCH = Set.of(6618);
+	private static final Set<Integer> CHAOSFANATIC = Set.of(6619);
 	private static final Set<Integer> ROGUE = Set.of(6603);
 	private static final Set<Integer> TOWN_CRIER = Set.of(276, 277, 278, 279, 280, 6823, 10887);
 
@@ -156,6 +157,10 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteCrazyArchOH())
 		{
 			mutedNPCsOH.addAll(CRAZYARCH);
+		}
+		if (config.muteChaosFanaticOH())
+		{
+			mutedNPCsOH.addAll(CHAOSFANATIC);
 		}
 		if (config.muteRoguesOH())
 		{
