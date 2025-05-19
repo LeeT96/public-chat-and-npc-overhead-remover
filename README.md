@@ -28,6 +28,7 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
   - Commander Zilyana
 * Deranged Archaeologist
 * Crazy Archaeologist
+* Chaos Fanatic
 * Rogues (at the Rogue's Castle in the Wilderness)
 * Town Crier
 * Ramocean
