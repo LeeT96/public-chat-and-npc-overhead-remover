@@ -56,6 +56,9 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> CHAOSFANATIC = Set.of(6619);
 	private static final Set<Integer> ROGUE = Set.of(6603);
 	private static final Set<Integer> TOWN_CRIER = Set.of(276, 277, 278, 279, 280, 6823, 10887);
+	private static final Set<Integer> CHAOS_FANATIC = Set.of(6619);
+	private static final Set<Integer> RAMOCEAN = Set.of(6937);
+	private static final Set<Integer> PROSPECTOR_PERCY = Set.of(6562);
 
 	// Special Attacks
 	private Set<String> activeMutesOH;
@@ -169,6 +172,18 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteTownCrierOH())
 		{
 			mutedNPCsOH.addAll(TOWN_CRIER);
+		}
+		if (config.muteChaosFanaticOH())
+		{
+			mutedNPCsOH.addAll(CHAOS_FANATIC);
+		}
+		if (config.muteRamoceanOH())
+		{
+			mutedNPCsOH.addAll(RAMOCEAN);
+		}
+		if (config.muteProspectorPercyOH())
+		{
+			mutedNPCsOH.addAll(PROSPECTOR_PERCY);
 		}
 
 		// Other - Overheads

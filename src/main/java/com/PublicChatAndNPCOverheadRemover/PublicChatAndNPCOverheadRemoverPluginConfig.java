@@ -135,17 +135,6 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	}
 
 	@ConfigItem(
-			keyName = "muteChaosFanaticOH",
-			name = "Chaos Fanatic",
-			description = "Hides all overhead messages during the Chaos Fanatic fight",
-			section = npcOHSection
-	)
-	default boolean muteChaosFanaticOH()
-	{
-		return true;
-	}
-
-	@ConfigItem(
 			keyName = "muteCerberusOH",
 			name = "Cerberus",
 			description = "Hides all overhead messages during the Cerberus fight",
@@ -244,6 +233,39 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "muteChaosFanaticOH",
+			name = "Chaos Fanatic",
+			description = "Hides all overhead messages during the Chaos Fanatic fight",
+			section = npcOHSection
+	)
+	default boolean muteChaosFanaticOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteRamoceanOH",
+			name = "Ramocean",
+			description = "Hides all overhead messages from Ramocean in the Hosidius Kitchen",
+			section = npcOHSection
+	)
+	default boolean muteRamoceanOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteProspectorPercyOH",
+			name = "Prospector Percy",
+			description = "Hides all overhead messages from Prospector Percy in the Motherlode Mine",
+			section = npcOHSection
+	)
+	default boolean muteProspectorPercyOH()
+	{
+		return true;
+	}
+
 	// Other - Overheads
 	@ConfigSection(
 			name = "Other - Overhead",
@@ -267,7 +289,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	@ConfigSection(
 			name = "Other - Public Chat",
 			description = "Other public chat messages",
-			position = 3
+			position = 4
 	)
 	String otherSectionPC = "otherSectionPC";
 
