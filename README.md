@@ -39,10 +39,12 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
 **_There are plans to include NPC public chat messages in the future_**
 
 # Current Other Overhead Messages
-* Cuppa Tea
+* Cuppa tea
+* Come here toady
 
 # Current Other Public Chat Messages
-* Cuppa Tea
+* Cuppa tea
+* Come here toady
 <br>
 <br>
 

@@ -41,6 +41,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 
 	// Other Messages
 	private static final String CUPPA_TEA_TEXT = "Aaah, nothing like a nice cuppa tea!";
+	private static final String TOADY_TEXT = "Come here toady!";
 
 	// NPC IDs
 	private static final Set<Integer> CERBERUS = Set.of(5862, 5863, 5866);
@@ -59,6 +60,13 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> CHAOS_FANATIC = Set.of(6619);
 	private static final Set<Integer> RAMOCEAN = Set.of(6937);
 	private static final Set<Integer> PROSPECTOR_PERCY = Set.of(6562);
+	private static final Set<Integer> POSTIE_PETE = Set.of(3291);
+	private static final Set<Integer> HUEY_SEER = Set.of(13997, 14008);
+	private static final Set<Integer> HUEY_WORKER = Set.of(14003, 14004);
+	private static final Set<Integer> RT_BRANDA = Set.of(12596, 14148);
+	private static final Set<Integer> RT_ELDRIC = Set.of(14147, 14149);
+	private static final Set<Integer> AMOXLIATL = Set.of(13685);
+	private static final Set<Integer> BENNY = Set.of(5216);
 
 	// Special Attacks
 	private Set<String> activeMutesOH;
@@ -185,17 +193,57 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		{
 			mutedNPCsOH.addAll(PROSPECTOR_PERCY);
 		}
+		if (config.muteRTBrandaOH())
+		{
+			mutedNPCsOH.addAll(RT_BRANDA);
+		}
+		if (config.muteRTEldricOH())
+		{
+			mutedNPCsOH.addAll(RT_ELDRIC);
+		}
+		if (config.muteAmoxliatlOH())
+		{
+			mutedNPCsOH.addAll(AMOXLIATL);
+		}
+		if (config.muteAmoxliatlOH())
+		{
+			mutedNPCsOH.addAll(AMOXLIATL);
+		}
+		if (config.muteBennyOH())
+		{
+			mutedNPCsOH.addAll(BENNY);
+		}
+		if (config.muteHueySeerOH())
+		{
+			mutedNPCsOH.addAll(HUEY_SEER);
+		}
+		if (config.muteHueyWorkerOH())
+		{
+			mutedNPCsOH.addAll(HUEY_WORKER);
+		}
+		if (config.mutePostiePeteOH())
+		{
+			mutedNPCsOH.addAll(POSTIE_PETE);
+		}
 
 		// Other - Overheads
 		if (config.muteTeaOH())
 		{
 			activeMutesOH.add(CUPPA_TEA_TEXT);
 		}
+		if (config.muteToadyOH())
+		{
+			activeMutesOH.add(TOADY_TEXT);
+		}
 
 		// Other - Overheads
 		if (config.muteTeaPC())
 		{
 			activeMutesPC.add(CUPPA_TEA_TEXT);
+		}
+		if (config.muteToadyPC())
+		{
+			activeMutesPC.add(TOADY_TEXT);
 		}
 
 		// NPCs - Public Chat

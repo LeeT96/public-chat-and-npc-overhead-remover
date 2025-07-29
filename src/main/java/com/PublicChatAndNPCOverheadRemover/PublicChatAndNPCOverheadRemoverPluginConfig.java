@@ -113,6 +113,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "muteAmoxliatlOH",
+			name = "Amoxliatl",
+			description = "Hides all overhead messages during the Amoxliatl fight",
+			section = npcOHSection
+	)
+	default boolean muteAmoxliatlOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 			keyName = "muteDerangedArchOH",
 			name = "Deranged Archaeologist",
 			description = "Hides all overhead messages during the Deranged Archaeologist fight",
@@ -154,6 +165,28 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	default boolean muteSummonedSoulOH()
 	{
 		return false;
+	}
+
+	@ConfigItem(
+			keyName = "muteRTBrandaOH",
+			name = "Royal Titans: Branda",
+			description = "Hides all overhead messages from Branda during the Royal Titans fight",
+			section = npcOHSection
+	)
+	default boolean muteRTBrandaOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteRTEldricOH",
+			name = "Royal Titans: Eldric",
+			description = "Hides all overhead messages from Eldric during the Royal Titans fight",
+			section = npcOHSection
+	)
+	default boolean muteRTEldricOH()
+	{
+		return true;
 	}
 
 	@ConfigItem(
@@ -234,12 +267,45 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "muteBennyOH",
+			name = "Benny",
+			description = "Hides all overhead messages from Benny in Varrock square",
+			section = npcOHSection
+	)
+	default boolean muteBennyOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
 			keyName = "muteChaosFanaticOH",
 			name = "Chaos Fanatic",
 			description = "Hides all overhead messages during the Chaos Fanatic fight",
 			section = npcOHSection
 	)
 	default boolean muteChaosFanaticOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteHueySeerOH",
+			name = "Hueycoatl: Seer",
+			description = "Hides all Seer overhead messages during the Hueycoatl fight",
+			section = npcOHSection
+	)
+	default boolean muteHueySeerOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteHueyWorkerOH",
+			name = "Hueycoatl: Worker",
+			description = "Hides all Worker overhead messages during the Hueycoatl fight",
+			section = npcOHSection
+	)
+	default boolean muteHueyWorkerOH()
 	{
 		return true;
 	}
@@ -266,6 +332,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "mutePostiePeteOH",
+			name = "Postie Pete",
+			description = "Hides all overhead messages from Postie Pete (not the random event one)",
+			section = npcOHSection
+	)
+	default boolean mutePostiePeteOH()
+	{
+		return true;
+	}
+
 	// Other - Overheads
 	@ConfigSection(
 			name = "Other - Overhead",
@@ -285,6 +362,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "muteToadyOH",
+			name = "Hide Toady",
+			description = "Hides the 'Come here toady!' public chat message",
+			section = otherSectionOH
+	)
+	default boolean muteToadyOH()
+	{
+		return true;
+	}
+
 	// Other - Public Chat
 	@ConfigSection(
 			name = "Other - Public Chat",
@@ -300,6 +388,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 			section = otherSectionPC
 	)
 	default boolean muteTeaPC()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteToadyPC",
+			name = "Hide Toady",
+			description = "Hides the 'Come here toady!' public chat message",
+			section = otherSectionPC
+	)
+	default boolean muteToadyPC()
 	{
 		return true;
 	}
