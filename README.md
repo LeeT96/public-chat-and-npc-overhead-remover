@@ -33,6 +33,15 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
 * Town Crier
 * Ramocean
 * Prospector Percy
+* Amoxliatl
+* Royal Titans
+  - Eldric
+  - Branda
+* Hueycoatl
+  - Seer
+  - Worker
+* Benny
+* Postie Pete
 
 **_There are plans to allow specific Overhead messages to be allowed when muting an NPC, such as "Learn to read!". However, this must first be tested and be approved to be in accordance to Jagex's rules._**
 
