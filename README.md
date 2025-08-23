@@ -42,10 +42,15 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
   - Worker
 * Benny
 * Postie Pete
+* Vet'ion & Calvar'ion
+* Master Farmers and Ardougne Knights (Pickpocketing)
+* Sleeping Farming Guild Cat
+* Grand Exchange Recruiters
+* Grand Exchange Guides
 
-**_There are plans to allow specific Overhead messages to be allowed when muting an NPC, such as "Learn to read!". However, this must first be tested and be approved to be in accordance to Jagex's rules._**
-
-**_There are plans to include NPC public chat messages in the future_**
+# Manual List of NPC IDs
+_Some NPCs have multiple IDs, therefore you are provided the option to use a checkbox to mute pre-defined NPCs that may have multiple IDs, as well as having the option to provide a list of your own NPCs to mute using their NPC ID.
+There is the option to show NPC IDs above their head to save you looking it up online._
 
 # Current Other Overhead Messages
 * Cuppa tea

@@ -343,6 +343,83 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
+	@ConfigItem(
+			keyName = "muteArdyKnightOH",
+			name = "Pickpocketing: Ardy Knights",
+			description = "Hides the 'What do you think you're doing?' overhead message when pickpocketing an Ardy Knight",
+			section = npcOHSection
+	)
+	default boolean muteArdyKnightOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteMasterFarmerOH",
+			name = "Pickpocketing: Master Famers",
+			description = "Hides the 'Cor blimey mate, what are ye doing in me pockets?' overhead message when pickpocketing a Master Farmer",
+			section = npcOHSection
+	)
+	default boolean muteMasterFarmerOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteFarmingGuildCatOH",
+			name = "Cat (Farming Guild)",
+			description = "Hides the 'Zzz' overhead message from the sleeping cat in the Farming Guild",
+			section = npcOHSection
+	)
+	default boolean muteFarmingGuildCatOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteCalvOH",
+			name = "Calvar'ion",
+			description = "Hides all overhead messages during the Calvar'ion fight",
+			section = npcOHSection
+	)
+	default boolean muteCalvOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteVetionOH",
+			name = "Vet'ion",
+			description = "Hides all overhead messages during the Vet'ion fight",
+			section = npcOHSection
+	)
+	default boolean muteVetionOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteGEGuidesOH",
+			name = "Grand Exchange: Market Price Guides",
+			description = "Hides all overhead messages during from the various guides around the GE (such as Bob Barter and Murky Matt)",
+			section = npcOHSection
+	)
+	default boolean muteGEGuidesOH()
+	{
+		return true;
+	}
+
+	@ConfigItem(
+			keyName = "muteGERecruitersOH",
+			name = "Grand Exchange: Recruiters",
+			description = "Hides all overhead messages during from the Castle Wars recruiters in the SW corner of the GE",
+			section = npcOHSection
+	)
+	default boolean muteGERecruitersOH()
+	{
+		return true;
+	}
+
 	// Other - Overheads
 	@ConfigSection(
 			name = "Other - Overhead",
@@ -403,23 +480,36 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return true;
 	}
 
-	// NPCs - Public Chat
-//	@ConfigSection(
-//			name = "NPC - Public Chat",
-//			description = "NPC public chat messages",
-//			position = 3
-//	)
-//	String npcPCSection = "npcPCSection";
-//
-//	@ConfigItem(
-//			keyName = "muteNexPC",
-//			name = "Nex",
-//			description = "Hides all public chat messages during the Nex fight",
-//			section = npcOHSection
-//	)
-//	default boolean muteNexPC()
-//	{
-//		return false;
-//	}
+	// Manual Entries
+	@ConfigSection(
+			name = "Manual NPC IDs - Overhead",
+			description = "Manually enter NPC IDs to mute overhead messages",
+			position = 5
+	)
+	String manualOHSection = "manualOHSection";
+
+	@ConfigItem(
+			position = 1,
+			keyName = "NPCIDsOH",
+			name = "NPC IDs",
+			description = "List of NPC IDs to mute overhead messages [Separate each NPC ID with a comma ', ']",
+			section = manualOHSection
+	)
+	default String NPCIDsOH()
+	{
+		return "";
+	}
+
+	@ConfigItem(
+			position = 2,
+			keyName = "debugNPC",
+			name = "Show NPC IDs Overhead",
+			description = "Shows all NPCs with their Name and ID",
+			section = manualOHSection
+	)
+	default boolean debugNPC()
+	{
+		return false;
+	}
 
 }

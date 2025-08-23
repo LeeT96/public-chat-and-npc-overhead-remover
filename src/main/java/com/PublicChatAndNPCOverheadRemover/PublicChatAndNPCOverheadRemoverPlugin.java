@@ -3,6 +3,7 @@ package com.PublicChatAndNPCOverheadRemover;
 import com.google.inject.Provides;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
+import net.runelite.api.NPC;
 import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.OverheadTextChanged;
 import net.runelite.client.callback.ClientThread;
@@ -15,6 +16,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 import javax.inject.Inject;
 import java.util.HashSet;
 import java.util.Set;
+import net.runelite.client.ui.overlay.OverlayManager;
 
 @Slf4j
 @PluginDescriptor(
@@ -31,6 +33,12 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 
 	@Inject
 	private PublicChatAndNPCOverheadRemoverPluginConfig config;
+
+	@Inject
+	private OverlayManager overlayManager;
+
+	@Inject
+	private  PublicChatAndNPCOverheadRemoverPluginOverlay overlay;
 
 	static final String CONFIG_GROUP = "PublicChatAndNPCOverheadRemoverConfigGroup";
 
@@ -67,6 +75,16 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> RT_ELDRIC = Set.of(14147, 14149);
 	private static final Set<Integer> AMOXLIATL = Set.of(13685);
 	private static final Set<Integer> BENNY = Set.of(5216);
+	private static final Set<Integer> MASTER_FARMER = Set.of(5730, 5731, 11940, 11941, 13236, 13237, 13238, 13239, 13240, 13241, 13242, 13243, 14755, 14756, 14757, 14758);
+	private static final Set<Integer> ARDY_KNIGHT = Set.of(3297, 3300, 8854, 11902, 11936);
+	private static final Set<Integer> FARMING_GUILD_CAT = Set.of(8594);
+	private static final Set<Integer> CALVARION = Set.of(11993, 11994, 11995);
+	private static final Set<Integer> VETION = Set.of(6611, 6612, 12002);
+	private static final Set<Integer> GE_GUIDES = Set.of(5449, 2152, 3115, 5451, 5450, 5452, 8193);
+	private static final Set<Integer> GE_RECRUITERS = Set.of(10732, 8644);
+
+	boolean debugNPC;
+	private Set<Integer> MANUAL_LIST = new HashSet<>();
 
 	// Special Attacks
 	private Set<String> activeMutesOH;
@@ -74,20 +92,48 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 
 	// NPCs
 	private Set<Integer> mutedNPCsOH;
-//	private Set<Integer> mutedNPCsPC;
+
 
 	@Override
 	protected void startUp() throws Exception
 	{
+		debugNPC = config.debugNPC();
+		overlayManager.add(overlay);
+
 		// Special Attacks
 		activeMutesOH = new HashSet<>();
 		activeMutesPC = new HashSet<>();
 
 		// NPCs
 		mutedNPCsOH = new HashSet<>();
-//		mutedNPCsPC = new HashSet<>();
+
 
 		readConfig();
+	}
+
+	private Set<Integer> splitList(String configStr)
+	{
+		Set<Integer> result = new HashSet<>();
+
+		if (configStr != null && !configStr.isEmpty())
+		{
+			for (String str : configStr.split(","))
+			{
+				str = str.trim();
+				if (!str.isEmpty())
+				{
+					try
+					{
+						result.add(Integer.parseInt(str));
+					}
+					catch (NumberFormatException e)
+					{
+						log.warn("Invalid NPC ID in config: {}", str);
+					}
+				}
+			}
+		}
+		return result;
 	}
 
 	private void readConfig()
@@ -225,6 +271,34 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		{
 			mutedNPCsOH.addAll(POSTIE_PETE);
 		}
+		if (config.muteGEGuidesOH())
+		{
+			mutedNPCsOH.addAll(GE_GUIDES);
+		}
+		if (config.muteGERecruitersOH())
+		{
+			mutedNPCsOH.addAll(GE_RECRUITERS);
+		}
+		if (config.muteCalvOH())
+		{
+			mutedNPCsOH.addAll(CALVARION);
+		}
+		if (config.muteVetionOH())
+		{
+			mutedNPCsOH.addAll(VETION);
+		}
+		if (config.muteFarmingGuildCatOH())
+		{
+			mutedNPCsOH.addAll(FARMING_GUILD_CAT);
+		}
+		if (config.muteArdyKnightOH())
+		{
+			mutedNPCsOH.addAll(ARDY_KNIGHT);
+		}
+		if (config.muteMasterFarmerOH())
+		{
+			mutedNPCsOH.addAll(MASTER_FARMER);
+		}
 
 		// Other - Overheads
 		if (config.muteTeaOH())
@@ -246,21 +320,22 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 			activeMutesPC.add(TOADY_TEXT);
 		}
 
-		// NPCs - Public Chat
-//		if (config.muteNexPC())
-//		{
-//			mutedNPCsPC.addAll(NEX);
-//		}
+		// Manual - Overheads
+		mutedNPCsOH.addAll(MANUAL_LIST);
+
+
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
+		overlayManager.remove(overlay);
+
 		activeMutesOH.clear();
 		activeMutesPC.clear();
 
 		mutedNPCsOH.clear();
-//		mutedNPCsPC.clear();
+
 	}
 
 	@Subscribe
@@ -306,6 +381,8 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	{
 		if (event.getGroup().equals(CONFIG_GROUP))
 		{
+			debugNPC = config.debugNPC();
+			MANUAL_LIST = splitList(config.NPCIDsOH());
 			readConfig();
 		}
 	}
