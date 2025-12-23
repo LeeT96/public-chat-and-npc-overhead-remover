@@ -46,6 +46,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final String AXE_SPECIAL_TEXT = "Chop chop!";
 	private static final String PICKAXE_SPECIAL_TEXT = "Smashing!";
 	private static final String HARPOON_SPECIAL_TEXT = "Here fishy fishies!";
+	private static final String BATTLEAXE_SPECIAL_TEXT = "Raarrrrrgggggghhhhhhh!";
 
 	// Other Messages
 	private static final String CUPPA_TEA_TEXT = "Aaah, nothing like a nice cuppa tea!";
@@ -159,6 +160,10 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		{
 			activeMutesOH.add(HARPOON_SPECIAL_TEXT);
 		}
+		if (config.muteBattleaxesOH())
+		{
+			activeMutesOH.add(BATTLEAXE_SPECIAL_TEXT);
+		}
 
 		// Special Attacks - Public Chat
 		if (config.muteAxesPC())
@@ -172,6 +177,10 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteHarpoonsPC())
 		{
 			activeMutesPC.add(HARPOON_SPECIAL_TEXT);
+		}
+		if (config.muteBattleaxesPC())
+		{
+			activeMutesPC.add(BATTLEAXE_SPECIAL_TEXT);
 		}
 
 		// NPCs - Overheads

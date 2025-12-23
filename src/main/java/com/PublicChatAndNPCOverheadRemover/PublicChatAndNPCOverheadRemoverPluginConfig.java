@@ -26,7 +26,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteAxesOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -37,7 +37,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean mutePickaxesOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -48,7 +48,18 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteHarpoonsOH()
 	{
-		return true;
+		return false;
+	}
+
+	@ConfigItem(
+			keyName = "muteBattleaxesOH",
+			name = "Hide Battleaxe Specs",
+			description = "Hides the 'Raarrrrrgggggghhhhhhh!' overhead message",
+			section = specialAttacksSectionOH
+	)
+	default boolean muteBattleaxesOH()
+	{
+		return false;
 	}
 
 	// Special Attacks - Public Chat
@@ -67,7 +78,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteAxesPC()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -78,7 +89,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean mutePickaxesPC()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -89,7 +100,18 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteHarpoonsPC()
 	{
-		return true;
+		return false;
+	}
+
+	@ConfigItem(
+			keyName = "muteBattleaxesPC",
+			name = "Hide Battleaxe Specs",
+			description = "Hides the 'Raarrrrrgggggghhhhhhh!' public chat message",
+			section = specialAttacksSectionPC
+	)
+	default boolean muteBattleaxesPC()
+	{
+		return false;
 	}
 
 
@@ -109,7 +131,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteRoguesOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -120,7 +142,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteAmoxliatlOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -131,7 +153,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteDerangedArchOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -142,7 +164,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteCrazyArchOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -175,7 +197,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteRTBrandaOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -186,7 +208,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteRTEldricOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -197,7 +219,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteBarbarianOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -208,7 +230,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteNexOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -219,7 +241,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteGeneralGraardorOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -230,7 +252,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteCommanderZilyanaOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -241,7 +263,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteKreeOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -252,7 +274,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteKrilOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -263,7 +285,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteTownCrierOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -274,7 +296,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteBennyOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -285,7 +307,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteChaosFanaticOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -296,7 +318,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteHueySeerOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -307,7 +329,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteHueyWorkerOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -318,7 +340,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteRamoceanOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -329,7 +351,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteProspectorPercyOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -340,7 +362,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean mutePostiePeteOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -351,7 +373,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteArdyKnightOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -362,7 +384,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteMasterFarmerOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -373,7 +395,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteFarmingGuildCatOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -384,7 +406,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteCalvOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -395,7 +417,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteVetionOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -406,7 +428,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteGEGuidesOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -417,7 +439,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteGERecruitersOH()
 	{
-		return true;
+		return false;
 	}
 
 	// Other - Overheads
@@ -436,7 +458,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteTeaOH()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -447,7 +469,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteToadyOH()
 	{
-		return true;
+		return false;
 	}
 
 	// Other - Public Chat
@@ -466,7 +488,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteTeaPC()
 	{
-		return true;
+		return false;
 	}
 
 	@ConfigItem(
@@ -477,7 +499,7 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	)
 	default boolean muteToadyPC()
 	{
-		return true;
+		return false;
 	}
 
 	// Manual Entries
