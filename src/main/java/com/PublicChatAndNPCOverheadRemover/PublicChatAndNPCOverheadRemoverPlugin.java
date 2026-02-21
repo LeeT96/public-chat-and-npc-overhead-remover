@@ -330,6 +330,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		}
 
 		// Manual - Overheads
+		MANUAL_LIST = splitList(config.NPCIDsOH());
 		mutedNPCsOH.addAll(MANUAL_LIST);
 
 
@@ -391,7 +392,6 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (event.getGroup().equals(CONFIG_GROUP))
 		{
 			debugNPC = config.debugNPC();
-			MANUAL_LIST = splitList(config.NPCIDsOH());
 			readConfig();
 		}
 	}
