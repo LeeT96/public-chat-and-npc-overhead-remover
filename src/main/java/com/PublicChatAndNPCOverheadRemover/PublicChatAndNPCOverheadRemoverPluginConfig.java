@@ -300,6 +300,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "muteFeroxOH",
+			name = "Ferox Enclave",
+			description = "Hides all overhead messages from Pete Kayer, Banker, Skully, and Refugee in the Ferox Enclave",
+			section = npcOHSection
+	)
+	default boolean muteFeroxOH()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 			keyName = "muteChaosFanaticOH",
 			name = "Chaos Fanatic",
 			description = "Hides all overhead messages during the Chaos Fanatic fight",
