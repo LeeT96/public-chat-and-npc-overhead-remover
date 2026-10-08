@@ -76,6 +76,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> RT_ELDRIC = Set.of(14147, 14149);
 	private static final Set<Integer> AMOXLIATL = Set.of(13685);
 	private static final Set<Integer> BENNY = Set.of(5216);
+	private static final Set<Integer> FEROX_ENCLAVE = Set.of(16576, 10389, 10382, 10383);
 	private static final Set<Integer> MASTER_FARMER = Set.of(5730, 5731, 11940, 11941, 13236, 13237, 13238, 13239, 13240, 13241, 13242, 13243, 14755, 14756, 14757, 14758);
 	private static final Set<Integer> ARDY_KNIGHT = Set.of(3297, 3300, 8854, 11902, 11936);
 	private static final Set<Integer> FARMING_GUILD_CAT = Set.of(8594);
@@ -267,6 +268,10 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteBennyOH())
 		{
 			mutedNPCsOH.addAll(BENNY);
+		}
+		if (config.muteFeroxOH())
+		{
+			mutedNPCsOH.addAll(FEROX_ENCLAVE);
 		}
 		if (config.muteHueySeerOH())
 		{

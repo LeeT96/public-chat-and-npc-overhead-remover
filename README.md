@@ -41,6 +41,11 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
   - Seer
   - Worker
 * Benny
+* Ferox Enclave NPCs
+  - Pete Kayer
+  - Banker
+  - Skully
+  - Refugee
 * Postie Pete
 * Vet'ion & Calvar'ion
 * Master Farmers and Ardougne Knights (Pickpocketing)
