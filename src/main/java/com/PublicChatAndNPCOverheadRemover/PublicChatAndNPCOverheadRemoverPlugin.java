@@ -83,6 +83,7 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 	private static final Set<Integer> VETION = Set.of(6611, 6612, 12002);
 	private static final Set<Integer> GE_GUIDES = Set.of(5449, 2152, 3115, 5451, 5450, 5452, 8193);
 	private static final Set<Integer> GE_RECRUITERS = Set.of(10732, 8644);
+	private static final Set<Integer> PET_DOGS = Set.of(16361, 16362, 16363, 16364, 16365, 16366, 16367, 16368, 16369, 16370, 16371, 16372, 16373, 16374, 16375, 16376, 16377, 16378, 16379, 16380, 16381, 16382, 16383, 16384, 16385, 16386, 16387, 16388, 16389, 16390, 16391, 16392, 16393, 16394, 16395, 16396, 16398, 16400, 16402, 16404, 16406, 16408, 16410, 16412, 16414, 16433, 16434, 16435, 16436, 16437, 16438, 16439, 16440, 16441, 16442, 16443, 16444, 16445, 16446, 16447, 16448, 16449, 16450, 16451, 16452, 16453, 16454, 16455, 16456, 16457, 16458, 16459, 16460, 16461, 16462, 16463, 16464, 16465, 16466, 16467, 16468, 16540, 16541, 16542, 16543, 16544, 16545, 16546, 16547, 16548, 16549, 16550, 16551, 16552, 16553, 16554, 16555, 16556, 16557, 16558, 16559, 16560, 16561, 16562, 16563, 16564, 16565, 16566, 16567, 16568, 16569, 16570, 16571, 16572, 16573, 16574, 16575);
 
 	boolean debugNPC;
 	private Set<Integer> MANUAL_LIST = new HashSet<>();
@@ -287,6 +288,10 @@ public class PublicChatAndNPCOverheadRemoverPlugin extends Plugin
 		if (config.muteGERecruitersOH())
 		{
 			mutedNPCsOH.addAll(GE_RECRUITERS);
+		}
+		if (config.mutePetDogsOH())
+		{
+			mutedNPCsOH.addAll(PET_DOGS);
 		}
 		if (config.muteCalvOH())
 		{

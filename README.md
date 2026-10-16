@@ -47,6 +47,7 @@ This plugin currently works based on a selection of NPCs using checkboxes; howev
 * Sleeping Farming Guild Cat
 * Grand Exchange Recruiters
 * Grand Exchange Guides
+* Pet Dogs
 
 # Manual List of NPC IDs
 _Some NPCs have multiple IDs, therefore you are provided the option to use a checkbox to mute pre-defined NPCs that may have multiple IDs, as well as having the option to provide a list of your own NPCs to mute using their NPC ID.
