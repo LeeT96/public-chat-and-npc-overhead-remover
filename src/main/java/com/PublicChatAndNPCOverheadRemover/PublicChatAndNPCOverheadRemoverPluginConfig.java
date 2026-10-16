@@ -453,6 +453,17 @@ public interface PublicChatAndNPCOverheadRemoverPluginConfig extends Config
 		return false;
 	}
 
+	@ConfigItem(
+			keyName = "mutePetDogsOH",
+			name = "Pet Dogs",
+			description = "Hides all overhead messages from players' pet dogs",
+			section = npcOHSection
+	)
+	default boolean mutePetDogsOH()
+	{
+		return false;
+	}
+
 	// Other - Overheads
 	@ConfigSection(
 			name = "Other - Overhead",
